@@ -2,13 +2,17 @@
 Programma per calcolare il tempo in cui un animale resta all'interno di uno dei tre bracci di un labirinto.
 
 LANCIARE IL PROGRAMMA SU MAC-OS:
-ho utilizzato un ambiente virtuale che ha già installate le dipendenze necessarie:
+creao un ambiente virtuale che ha già installate le dipendenze necessarie:
 per attivarlo devo:
-1) entrare nelal cartella Maze-main
-2) dare il comando: source env/bin/activate 
+1) entrare nella cartella Maze-main
+2) Creao l'ambiente virtuale con il comando: python3 -m venv maze 
+3) dare il comando: source maze/bin/activate 
 
-UTILIZZO:
+INSTALLAZIONE:
+A) Per prima cosa installo tutte le dipendenze con il comando:
+    pip install -r requirements.txt
 
+UTILIZZO
 1) Da dentro la cartella lancio il comando:
 
    python3 maze.py    
