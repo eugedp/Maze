@@ -3,11 +3,11 @@ Programma per traccaire come un animale si muove all'interno di un labirinto com
 Oltre alla sequenza dei percorsi presi, viene calcolare il tempo in cui un animale resta all'interno di ogni braccio.
 
 LANCIARE IL PROGRAMMA SU MAC-OS:
-creao un ambiente virtuale che ha già installate le dipendenze necessarie:
-per attivarlo devo:
-1) entrare nella cartella Maze-main
+creao un ambiente virtuale in cui installo tutte le dipendenze necessarie:
+
+1) Da terminale entro nella cartella Maze-main;
 2) Creao l'ambiente virtuale con il comando: python3 -m venv maze 
-3) dare il comando: source maze/bin/activate 
+3) Attivo l'ambiente con il comando: source maze/bin/activate 
 
 INSTALLAZIONE:
 A) Per prima cosa installo tutte le dipendenze con il comando:
