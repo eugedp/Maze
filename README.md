@@ -1,5 +1,5 @@
 # Maze-main
-Programma per calcolare il tempo in cui un animale resta all'interno di uno dei tre bracci di un labirinto.
+Programma per calcolare l'ordine dei bracci di un labirinto un cun un animale si muove e calcolare il tempo in cui un animale resta all'interno di ogni bracco.
 
 LANCIARE IL PROGRAMMA SU MAC-OS:
 creao un ambiente virtuale che ha già installate le dipendenze necessarie:
