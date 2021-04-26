@@ -1,5 +1,5 @@
 # Maze
-Programma per traccaire come un animale si muove all'interno di un labirinto composto da 3 rami. 
+Programma per tracciare come un animale si muove all'interno di un labirinto composto da 3 rami. 
 Oltre alla sequenza dei percorsi presi, viene calcolare il tempo in cui un animale resta all'interno di ogni braccio.
 
 INSTALLAZIONE SU MAC-OS:
