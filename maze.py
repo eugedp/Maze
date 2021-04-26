@@ -336,7 +336,7 @@ class MyInterface(QDialog):
             43:'AQ', 44:'AR', 45:'AS', 46:'AT', 47:'AU', 48:'AV', 49:'AW', 50:'AX', 51:'AY',
             52:'AZ'}
             xfile = openpyxl.load_workbook(cwd+'/Analisi_maze.xlsx')
-            sheet = xfile.get_sheet_by_name('Sheet1')
+            sheet = xfile['Sheet1']
             for riga in tutto:
                 sep=riga.split(' ')
                 for i in range(len(sep)):
