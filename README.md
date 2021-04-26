@@ -2,19 +2,17 @@
 Programma per traccaire come un animale si muove all'interno di un labirinto composto da 3 rami. 
 Oltre alla sequenza dei percorsi presi, viene calcolare il tempo in cui un animale resta all'interno di ogni braccio.
 
-LANCIARE IL PROGRAMMA SU MAC-OS:
-creao un ambiente virtuale in cui installo tutte le dipendenze necessarie:
+INSTALLAZIONE SU MAC-OS:
+A) creao un ambiente virtuale in cui installo tutte le dipendenze necessarie:
 
 1) Da terminale entro nella cartella Maze-main;
 2) Creao l'ambiente virtuale con il comando: python3 -m venv maze 
 3) Attivo l'ambiente con il comando: source maze/bin/activate 
 
-INSTALLAZIONE:
-A) Per prima cosa installo tutte le dipendenze con il comando:
-    pip install -r requirements.txt
+B) installo tutte le dipendenze con il comando: pip install -r requirements.txt
 
 UTILIZZO
-1) Da dentro la cartella lancio il comando:
+1) Con il terminale raggiungo la cartella del programma e lancio il comando:
 
    python3 maze.py    
 
