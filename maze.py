@@ -86,7 +86,7 @@ class MyInterface(QDialog):
             self.lista.append(mini_lista)
         # chiave=self.ui.lineEdit_2.text()  # prendo il numero animale
         self.ui.label_stampe.setText('CENTRO')
-        print('Centro')
+        #print('Centro')
     
     
     def braccioA(self,*args):
@@ -114,7 +114,7 @@ class MyInterface(QDialog):
             chiave=self.ui.lineEdit_2.text()         # prendo il numero animale
             self.ui.label_stampe.setText('BRACCIO A')
             self.esito['Animale_nr:_'+str(chiave)]=self.lista
-            print('Braccio A')
+            #print('Braccio A')
     
     def braccioB(self,*args):
         if self.ripetizione=='B':
@@ -140,7 +140,7 @@ class MyInterface(QDialog):
             chiave=self.ui.lineEdit_2.text()         # prendo il numero animale
             self.ui.label_stampe.setText('BRACCIO B')
             self.esito['Animale_nr:_'+str(chiave)]=self.lista
-            print('Braccio B')
+            #print('Braccio B')
         
     def braccioC(self,*args):
         if self.ripetizione=='C':
@@ -166,18 +166,18 @@ class MyInterface(QDialog):
         chiave=self.ui.lineEdit_2.text()         # prendo il numero animale
         self.ui.label_stampe.setText('BRACCIO C')
         self.esito['Animale_nr:_'+str(chiave)]=self.lista
-        print('Braccio C')
+        #print('Braccio C')
 
 
     def fsociety(self, lista_da_testo):
         lista_da_testo=lista_da_testo[:-1]
-        print(lista_da_testo)
+        #print(lista_da_testo)
         os.remove(os.path.join(str(cwd),'analisi_maze.txt'))
-        print('File eliminato')
+        #print('File eliminato')
         return lista_da_testo
 
     def inizia(self):
-        print('inizio')
+        #print('inizio')
         #ammazza(esito,lista)
         cwd = os.getcwd()
         #os.remove(os.path.join(str(cwd),'analisi_maze.txt'))
@@ -187,7 +187,7 @@ class MyInterface(QDialog):
             with open (cwd+'/analisi_maze.txt', 'r') as f:
                 tutto = f.readlines()
                 #corretto=fsociety(tutto)
-                print('dentro')
+                #print('dentro')
                 corretto= tutto[:-1]
                 with open (cwd+'/analisi_maze.txt', 'w') as f:    
                     for e in corretto:
@@ -270,7 +270,7 @@ class MyInterface(QDialog):
 
 
         self.ui.label_stampe.setText('SESSIONE CONCLUSA')
-        print('Sessione conclusa')
+        #print('Sessione conclusa')
         # chiave=self.ui.lineEdit_2.text()
         self.ripetizione=''
         return
@@ -312,7 +312,7 @@ class MyInterface(QDialog):
         row = 0
         there=self.interruttore()
         if there == 0:
-            print('NON esiste Excel')
+            #print('NON esiste Excel')
             filepath=str(cwd+'/Analisi_maze.xlsx')
             wb = openpyxl.Workbook()
             wb.save(filepath)
@@ -326,8 +326,8 @@ class MyInterface(QDialog):
             workbook.close()
             self.autoIncrement()
         else:
-            print('ESISTE Excel')
-            print(col)
+            #print('ESISTE Excel')
+            #print(col)
             rosetta={1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H',
             9:'I', 10: 'J', 11:'K', 12:'L', 13: 'M', 14: 'N', 15:'O', 16: 'P',
             17:'Q', 18:'R', 19:'S', 20:'T', 21:'U', 22:'V', 23:'W',24:'X', 25:'Y', 26:'Z',
@@ -377,7 +377,7 @@ class MyInterface(QDialog):
             self.centro()
 
     def test_method(self):
-        print('Premuto spazio')
+        #print('Premuto spazio')
 
 
 
