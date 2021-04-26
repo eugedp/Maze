@@ -1,5 +1,6 @@
-# Maze-main
-Programma per calcolare l'ordine dei bracci di un labirinto un cun un animale si muove e calcolare il tempo in cui un animale resta all'interno di ogni bracco.
+# Maze
+Programma per traccaire come un animale si muove all'interno di un labirinto composto da 3 rami. 
+Oltre alla sequenza dei percorsi presi, viene calcolare il tempo in cui un animale resta all'interno di ogni braccio.
 
 LANCIARE IL PROGRAMMA SU MAC-OS:
 creao un ambiente virtuale che ha già installate le dipendenze necessarie:
