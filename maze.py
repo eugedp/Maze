@@ -226,10 +226,9 @@ class MyInterface(QDialog):
         self.stopwatchA.reset()
         self.stopwatchB.reset()
         self.stopwatchC.reset()
-
+        stringa=''
         if mini_lista !={}:
-            self.lista.append(mini_lista)
-            stringa=''
+            self.lista.append(mini_lista)    
         for k,v in self.esito.items():
             stringa+=k
             stringa+=' '
@@ -286,6 +285,35 @@ class MyInterface(QDialog):
             col += pInterval
         return col  
 
+
+    def ott_colonna(self):
+        global col
+        #print('valore iniziale della colonna:')
+        #print(col)
+        cwd = os.getcwd()
+        interruttore=self.interruttore()
+        if interruttore == 1:
+            #print('Esiste già un file excel')
+            xfile = openpyxl.load_workbook(cwd+'/Analisi_maze.xlsx')
+            sheet = xfile['Sheet1']
+            #print(xfile['Sheet1']['A1'].value)
+            rosetta_base=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+            'AA','AB','AC','AD','AE','AF','AG','AH','AI','AJ','AK','AL','AM','AN','AO','AP','AQ', 'AR','AS', 'AT', 'AU','AV','AW',
+            'AX','AY','AZ']
+            for lettera in rosetta_base:
+                colonna=str(lettera)+'1'
+                if xfile['Sheet1'][colonna].value  != None:
+                    self.autoIncrement()
+                    #print(col)
+                else:
+                    #print('casella vuota')
+                    #print(col)
+                    return col
+        else:
+            #print('Non esiste il file excel')
+            return 0
+
+
     
     def interruttore(self):
         there = 0
@@ -297,11 +325,14 @@ class MyInterface(QDialog):
                 pass
         return there
 
+
+
+
     def esporta(self):
         '''Conclude la sessione di un singolo topo e trascrive i risultati in un file txt
         poi li passa in un excel'''
-        # print(sessione) #ripendo la sessione creata
         global col
+        col=self.ott_colonna()
         cwd = os.getcwd()
         workbook = xlsxwriter.Workbook('Analisi_maze.xlsx')
         worksheet = workbook.add_worksheet()
@@ -324,7 +355,7 @@ class MyInterface(QDialog):
                     sep[i]=sep[i].replace('\n','')
                     worksheet.write(row+i, col, sep[i])
             workbook.close()
-            self.autoIncrement()
+            #self.autoIncrement()
         else:
             #print('ESISTE Excel')
             #print(col)
@@ -345,9 +376,10 @@ class MyInterface(QDialog):
                     sep[i]=sep[i].replace('\n','')
                     sheet[str(rosetta[col+1])+str(i+1)] = sep[i]
             xfile.save('Analisi_maze.xlsx')
-            self.autoIncrement()
+            #self.autoIncrement()
+        col=0
 
-        return
+        return col
 
 
 
